@@ -37,3 +37,26 @@ var swiper = new Swiper('.popular-content', {
     },
   },
 });
+
+// show video
+
+let playButton = document.querySelector('.play-movie');
+let video = document.querySelector('.video-container');
+let closeBtn = document.querySelector('.close-video');
+let myVideo = document.getElementById('myvideo');
+
+playButton.onclick = () => {
+  video.classList.add('show-video');
+
+  // auto play
+
+  myVideo.play();
+};
+
+closeBtn.onclick = () => {
+  video.classList.remove('show-video');
+
+  // auto play
+
+  myVideo.pause();
+};
